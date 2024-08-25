@@ -15,9 +15,6 @@ class Manager(commands.Cog):
     async def on_message(self, message):
         if message.author == self.bot.user:
             return
-        
-        if "aboba" in message.content:
-            await message.channel.send(f"Abóba, {message.author.mention}")
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
