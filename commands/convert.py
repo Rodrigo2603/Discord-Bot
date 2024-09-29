@@ -7,7 +7,7 @@ class Convert(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="converter", help="You can compare two coins, e.g.: !converter USD BRL ")
+    @commands.command(name="convert", help="You can compare two coins, e.g.: !convert USD BRL ")
     async def ConverterMoeda(self, ctx, coin1, coin2):
         try:
             response = requests.get(f"https://economia.awesomeapi.com.br/json/last/{coin1.upper()}-{coin2.upper()}")
