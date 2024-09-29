@@ -6,10 +6,10 @@ class Talks(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="ola", help="greets you")
+    @commands.command(name="hi", help="greets you")
     async def hello(self, ctx):
         name = ctx.author.mention
-        response = "Olá, " + name
+        response = "Hi, " + name
         await ctx.send(response)
 
 async def setup(bot):
