@@ -8,7 +8,7 @@ class Image(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name="comida", help="Shows food")
+    @commands.command(name="food", help="Shows food")
     async def get_random_comida(self, ctx):
         response = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
         data = response.json()
@@ -27,7 +27,7 @@ class Image(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name="capivara", help="Shows capybaras")
+    @commands.command(name="capybara", help="Shows capybaras")
     async def get_random_capivara(self, ctx):
         response = requests.get("https://api.capy.lol/v1/capybara?json=true")
         data = response.json()
@@ -44,7 +44,7 @@ class Image(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name="cachorro", help="Shows dogs")
+    @commands.command(name="dog", help="Shows dogs")
     async def get_random_cachorro(self, ctx):
         response = requests.get("https://api.thedogapi.com/v1/images/search")
         data = response.json()
@@ -62,7 +62,7 @@ class Image(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name="gatos", help="Shows kittens")
+    @commands.command(name="kitten", help="Shows kittens")
     async def get_random_cats(self, ctx):
         response = requests.get("https://api.thecatapi.com/v1/images/search")
         data = response.json()
